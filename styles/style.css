@@ -6,6 +6,7 @@
   background: url(../images/cover-image-dark.png) center fixed;
   background-size: cover;
   background-attachment: fixed;
+  background-color: #000028;
   padding: 0 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
@@ -33,7 +34,7 @@
 
 .header__theme-menu-list {
   column-gap: 10px;
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 18px;
@@ -48,7 +49,7 @@
 }
 
 .rec {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -62,7 +63,7 @@
   top: 10px;
   right: 38px;
   color: #ff0070;
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -126,7 +127,6 @@
   color: var(--color);
   align-self: center;
   justify-self: end;
-  max-height: 668px;
 }
 
 .header__theme-menu-button {
@@ -139,20 +139,20 @@
   pointer-events: none;
 }
 
-.header__theme-menu-button_type_light:hover {
-  border: 1px solid #ff007066;
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-hover-light);
 }
 
-.header__theme-menu-button_type_light:focus-visible {
+.header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--accent-color);
 }
 
-.header__theme-menu-button_type_dark:hover {
-  border: 1px solid #32312d66;
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-hover-dark);
 }
 
-.header__theme-menu-button_type_dark:focus-visible {
+.header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--color-font);
 }
@@ -164,7 +164,7 @@
 .title__content {
   color: var(--color);
   margin-block-start: 20px;
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--font-size, 18px);
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
@@ -201,7 +201,7 @@
 }
 
 .concentration {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--font-size, 18px);
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
@@ -211,7 +211,7 @@
 
 .concentration__title {
   color: var(--color-title);
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--font-size, 18px);
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
@@ -219,7 +219,7 @@
 }
 
 .concentration__subtitle {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
@@ -253,7 +253,7 @@
 
 .gallery {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 
 .gallery__image {
@@ -290,7 +290,7 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .hard__to-concentrate {
+  .content__section {
     margin-block-start: 80px;
     display: grid;
     grid-template-columns: 236px 472px;
@@ -301,10 +301,10 @@
   .articles {
     display: grid;
     gap: 20px;
-    width: 100%;
+    /*width: 100%;*/
   }
 
-  .decreased__attention {
+  .content__section {
     margin-block-start: 80px;
   }
 
@@ -312,7 +312,15 @@
     inline-size: 236px;
   }
 
-  .fish__concentration {
+  .article__concentration{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-column: 1 / -1;
+    grid-row: span 2;
+  }
+
+  .content__section {
     margin-block-start: 80px;
     display: grid;
     grid-template-columns: 236px 472px;
@@ -320,7 +328,7 @@
     gap: 20px;
   }
 
-  .concentration__title {
+  .concentration {
     margin-block-start: 20px;
   }
 
@@ -371,18 +379,18 @@
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     line-height: 129.53px;
     letter-spacing: 0%;
     justify-self: start;
   }
 
-  .hard__to-concentrate {
+  .content__section {
     grid-template-columns: 314.96px 648.92px;
   }
 
-  /*несколько вариантов решения*/
+  /*несколько вариантов решений*/
 
   /*.decreased__attention{
     display: grid;
@@ -397,16 +405,16 @@
     grid-row: span 2;
   }
 
-  .article__multitasking {
+  /*.article__multitasking {
     grid-column: 1/2;
-  }
+  }*/
 
-  .fish__concentration {
+  /*.fish__concentration {
     width: 100%;
     grid-template-columns: 315px 649px;
-  }
+  }*/
 
-  .title {
+  .footer__title {
     justify-self: center;
   }
 }
