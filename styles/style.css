@@ -48,6 +48,12 @@
 }
 
 .rec {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  top: 10px;
+  right: 19px;
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -58,9 +64,9 @@
 .rec::before {
   content: "rec";
   text-transform: uppercase;
-  position: absolute;
+  /*position: absolute;
   top: 10px;
-  right: 38px;
+  right: 38px;*/
   color: var(--color-rec);
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
@@ -77,9 +83,9 @@
   block-size: 0.5rem;
   background-color: var(--color-ball);
   box-shadow: 0 0 4px 2px var(--color-ball);
-  position: absolute;
-  top: 18px;
-  right: 19px;
+  /*position: absolute;
+  /*top: 18px;
+  right: 19px;*/
 }
 
 /*углы*/
