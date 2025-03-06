@@ -3,15 +3,21 @@
   и их переопределение под различные устройства
 */
 :root{
+  --color-angles: #ff0070;
+  --color-main-title: #db00ff;
+  --color-ball: #ff0070;
+  --color-button: #ff0070;
   --accent-color:#FF0070;
   --color: #000028;
   --color-font: #f1b2ce;
   --font-size: 18px;
   --font-weight: 700;
   --color-title: #ff0070;
-  --color-light: #353430;
+  --color-light: #ff0070;
   --color-hover-dark: #32312d66;
   --color-hover-light: #ff007066;
+  --background-color: #000028;
+  --background: url(../images/cover-image-dark.png) center fixed;
 }
 
 

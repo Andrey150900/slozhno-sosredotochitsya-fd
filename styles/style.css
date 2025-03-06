@@ -1,9 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  margin: 0 auto;
   position: relative;
-  background: url(../images/cover-image-dark.png) center fixed;
+  background: var(--background);
   background-size: cover;
   background-attachment: fixed;
   background-color: #000028;
@@ -39,12 +38,12 @@
   font-weight: 400;
   line-height: 18px;
   position: relative;
-  color: var(--accent-color);
-  margin-block-start: 0;
+  color: var(--color-button);
+  /*margin-block-start: 0;*/
 }
 
 .header__theme-menu-item {
-  border: var(--accent-color) 1px solid;
+  /*border: var(--accent-color) 1px solid;*/
   text-decoration: transparent;
 }
 
@@ -62,7 +61,7 @@
   position: absolute;
   top: 10px;
   right: 38px;
-  color: #ff0070;
+  color: var(--color-rec);
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -76,8 +75,8 @@
   border-radius: 50%;
   inline-size: 0.5rem;
   block-size: 0.5rem;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--color-ball);
+  box-shadow: 0 0 4px 2px var(--color-ball);
   position: absolute;
   top: 18px;
   right: 19px;
@@ -109,14 +108,12 @@
 }
 
 .title {
-  flex-wrap: wrap;
-  flex-grow: 1;
-  display: block;
+  /*display: block;*/
   font-family: "subtitle__content", sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight, 700);
   line-height: 95.7px;
-  color: #db00ff;
+  color: var(--color-main-title);
   justify-self: start;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
@@ -127,6 +124,12 @@
   color: var(--color);
   align-self: center;
   justify-self: end;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -148,9 +151,9 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
-.header__theme-menu-button:hover {
+/*.header__theme-menu-button:hover {
   border: 1px solid var(--color-hover-dark);
-}
+}*/
 
 .header__theme-menu-button:focus-visible {
   outline: none;
@@ -228,7 +231,7 @@
 }
 
 .concentration__subtitle-imagine {
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .music__title {
@@ -252,6 +255,7 @@
 }
 
 .gallery {
+  margin-block-start: 10px;
   display: grid;
   gap: 20px;
 }
@@ -273,6 +277,11 @@
   block-size: max(668px, 100vh);
 }
 
+
+/*.content__section{
+  margin: 0 auto;
+}*/
+
 @media (width >= 768px) {
   .header {
     padding: 20px;
@@ -281,19 +290,15 @@
     inline-size: 50%;
   }
 
-  .header__theme-menu-list {
-    margin-block-start: 0;
-  }
-
   .title {
     justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .content__section {
-    margin-block-start: 80px;
+    margin-block-start: 50px;
     display: grid;
-    grid-template-columns: 236px 472px;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
   }
@@ -308,10 +313,6 @@
     margin-block-start: 80px;
   }
 
-  .concentration {
-    inline-size: 236px;
-  }
-
   .article__concentration{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -323,7 +324,7 @@
   .content__section {
     margin-block-start: 80px;
     display: grid;
-    grid-template-columns: 236px 472px;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
   }
@@ -338,6 +339,7 @@
   }
 
   .gallery {
+    margin-block-start: 20px;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -375,10 +377,10 @@
 
   .header__theme-menu-list {
     display: flex;
+    flex-direction: row;
   }
 
   .title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     line-height: 129.53px;
@@ -387,7 +389,7 @@
   }
 
   .content__section {
-    grid-template-columns: 314.96px 648.92px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /*несколько вариантов решений*/
