@@ -9,8 +9,11 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --color-list: #353430;
   --color-light: #353430;
   --color-ball: transparent;
+  --color-shadow: #ffc2e6;
+  --color-main-title:#ffc2e6;
   --color-rec: transparent;
   --color-hover-light: #32312d66;
   --color-button: #353430;
@@ -23,6 +26,8 @@
 
 @media (prefers-color-scheme: light) {
   :root{
+    --color-list: #353430;
+    --color-angles: #353430;
     --color-visible: #353430;
     --color-light: #353430;
     --color-main-title:#ffc2e6;
@@ -31,6 +36,7 @@
     --color-hover-light: #32312d66;
     --color-button: #353430;
     --accent-color: #ff8dcb;
+    --color-shadow: #ffc2e6;
     --color: #353430;
     --color-font: #353430;
     --color-title: #353430;
@@ -39,18 +45,6 @@
     .theme-auto .rec{
       display: none;
     }
-    .theme-auto .angles::after {
-      border-block-start: 1px solid var(--color-light);
-      border-inline-end: 1px solid var(--color-light);
-    }
-    
-    .theme-auto .angles::before {
-      border-inline-start: 1px solid var(--color-light);
-      border-block-end: 1px solid var(--color-light);
-    }
-    .theme-auto .header__theme-menu-button_active{
-      border: 1px solid var(--color-button);
-    }
 }
 
 .theme-light .page {
@@ -58,65 +52,8 @@
   --background: url(../images/cover-image-light.png) center fixed;
 }
 
-.theme-light .header__theme-menu-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid var(--color-visible);
-}
 
-.theme-light .header__theme-menu-list {
-  color: var(--color);
-  background: transparent;
-}
 
-.theme-light .header__theme-menu-item {
-  border: none;
-  background-color: transparent;
-}
-
-.theme-light .header__theme-menu-button_type_light {
-  border: 1px solid var(--color);
-}
-
-.theme-light .header__theme-menu-button {
-  background-color: transparent;
-}
-
-.header__theme-menu-button:hover {
-  border: 1px solid var(--color-hover-light);
-}
-
-.theme-light .rec {
-  display: none;
-}
-
-.theme-light .angles::after {
-  border-block-start: 1px solid var(--color-light);
-  border-inline-end: 1px solid var(--color-light);
-}
-
-.theme-light .angles::before {
-  border-inline-start: 1px solid var(--color-light);
-  border-block-end: 1px solid var(--color-light);
-}
-
-.theme-light .title {
-  color: #ffc2e6;
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-/*.theme-auto .header__theme-menu-button_active{
-  border: 1px solid var(--color-button);
-}
-
-.theme-auto .angles::after {
-  border-block-start: 1px solid var(--color-light);
-  border-inline-end: 1px solid var(--color-light);
-}
-
-.theme-auto .angles::before {
-  border-inline-start: 1px solid var(--color-light);
-  border-block-end: 1px solid var(--color-light);
-}*/
 
 
 
