@@ -170,11 +170,14 @@
 
 .title__content {
   color: var(--color);
-  margin-block-start: 20px;
+  /*margin-block-start: 20px;*/
   font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--font-size, 18px);
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
+  display: flex;
+  flex-direction: column;
+  /*gap: 10px;*/
 }
 
 .text__content {
@@ -202,16 +205,16 @@
   outline: 1px solid var(--color-font);
 }
 
+.article{
+  margin-block-end: 20px;
+}
+
 .link:hover {
   border-block-end: 1px solid var(--color-font);
 }
 
 .content__section{
-  margin-block-start: 50px;
-}
-
-.content__section:first-child{
-  margin-block-start: 0;
+  margin-block-end: 50px;
 }
 
 .concentration {
@@ -220,6 +223,7 @@
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
   color: var(--color-title);
+  margin-block-end: 20px;
 }
 
 
@@ -238,7 +242,7 @@
   font-weight: var(--font-weight, 700);
   line-height: 23.4px;
   color: var(--color);
-  margin-block-start: 20px;
+  margin-block-end: 20px;
 }
 
 .concentration__subtitle-imagine {
@@ -303,6 +307,7 @@
 
   .header{
     padding: 20px;
+    margin-block-end: 60px;
   }
 
   .rec{
@@ -336,17 +341,15 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .articles{
-    display: flex;
-    flex-direction: column;
+  .title__content{
+    
   }
 
   .article__concentration {
     grid-template-columns: repeat(3, 1fr);
-    /*gap: 20px;*/
+    gap: 20px;
     grid-column: 1 / -1;
     grid-row: span 2;
-    /*margin-block-start: -20px;*/
   }
 
   .content__section {
@@ -354,7 +357,7 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: 20px;
-    margin-block-end: 40px;
+    margin-block-end: 60px;
   }
 
   .concentration {
@@ -362,8 +365,12 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
-    margin-block-start: 20px;
+    margin-block-end: 0;
   }
+
+  /*.concentration__subtitle{
+    margin-block-end: 20px;
+  }*/
 
   .article__fish {
     display: grid;
@@ -371,7 +378,7 @@
   }
 
   .picture__title{
-    margin-block-start: 80px;
+    
   }
 
   .gallery {
@@ -404,6 +411,10 @@
     grid-column: span 2;
   }
 
+  .footer{
+    margin-block-start: 60px;
+  }
+
   .footer__title {
     justify-self: center;
   }
@@ -418,9 +429,8 @@
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
-    margin-block-start: 20px;
+    justify-content: space-between;
   }
-
 
   /*несколько вариантов решений*/
 
